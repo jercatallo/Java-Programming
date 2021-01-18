@@ -6,19 +6,8 @@ public class LeapYear{
  Scanner myInput =new Scanner(System.in);
  System.out.print("Enter Year: ");
  int year = myInput.nextInt();
- boolean isLeapYear = false;
- if (year % 4 == 0) {
- if (year % 100 == 0) {
- if (year % 400 == 0)
- isLeapYear = true;
- else
- isLeapYear = false;
- }
- else
- isLeapYear = true;
- }
- else
- isLeapYear = false;
+ boolean isLeapYear = (year % 4 == 0) && (year % 100 == 0 ? year % 400 == 0:true);
+
  if (isLeapYear)
  System.out.println(year + " is a leap year.");
  else
